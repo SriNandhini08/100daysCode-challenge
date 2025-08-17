@@ -1,1 +1,22 @@
-my name is sri nandhini
+\\positive or negative
+
+
+#include <stdio.h>
+
+int main() {
+    int a;
+    printf("enter a number to find positive or negative:");
+    scanf("%d",&a);
+    if (a>0){
+        printf("the number is positive");
+    }
+    else if(a<0){
+        printf("the number is negative");
+    }
+    else{
+        printf("the number is zero");
+        
+    }
+    return 0;
+}
+
