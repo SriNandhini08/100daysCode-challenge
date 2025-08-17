@@ -20,3 +20,304 @@ int main() {
     return 0;
 }
 
+\\odd or even
+
+#include <stdio.h>
+
+int main() {
+    int a;
+    printf("enter a number to check if odd or even");
+    scanf("%d",&a);
+    if (a%2==0){
+    printf("the number is even");
+    }
+    else{
+        printf("the number is odd");
+    }
+}
+
+\\sum of first n numbers
+
+#include <stdio.h>
+
+int main() {
+    int num,sum,i;
+    printf("enter a number:");
+    scanf("%d",&num);
+    sum=0;
+    for(i=0;i<=num;i++){
+        sum+=i;
+    }
+    printf("the sum is:%d",sum);
+    return 0;
+}
+
+\\sum of n numbers
+
+#include <stdio.h>
+
+int main(){
+    int start,end,i,sum=0;
+    printf("enter start and end range:");
+    scanf("%d %d",&start,&end);
+    for(i=start;i<=end;i++)
+    {
+        sum+=i;
+    }
+    printf("the sum is %d",sum);
+}
+
+//greatest of two number
+
+#include <stdio.h>
+
+int main(){
+    int num1,num2;
+    printf("enter two numbers:");
+    scanf("%d %d",&num1,&num2);
+    if(num1>num2){
+        printf("num1 is greater");
+    }
+    else
+    printf("num2 is greater");
+}
+
+\\greatest of three numbers
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int num1,num2,num3;
+    printf("enter num1,num2,num3:");
+    scanf("%d %d %d",&num1,&num2,&num3);
+    if (num1>=num2 &&num1>=num3)
+    printf("num1 is greater");
+    else if (num2>=num1 && num2>=num3)
+    printf("num 2 is greater");
+    else
+    printf("num3 is greater");
+    
+
+    return 0;
+}
+
+\\leap year or not
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int year;
+    printf("enter a year:");
+    scanf("%d",&year);
+    if(year%4==0)
+    printf("the year is leap year");
+    else
+    printf("the year is not a leap year");
+    return 0;
+}
+
+\\prime number
+
+n=int(input("enter a number:"))
+count=0
+for i in range (2,n):
+    if(n%i==0):
+        count+=1
+        break
+        
+if count==1:
+    print("the number is not a prime number")
+else:
+    print("the number is  a prime number")
+
+\\prime within a range
+
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isprime(int n) {
+    if (n < 2) return false; // 0 and 1 are not prime
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0)
+            return false;
+    }
+    return true;
+}
+
+int main() {
+    int start, end, i;
+    printf("Start: ");
+    scanf("%d", &start);
+    printf("End: ");
+    scanf("%d", &end);
+
+    for (i = start; i <= end; i++) {
+        if (isprime(i))
+            printf("%d ", i);
+    }
+
+    return 0;
+}
+
+\\sum of digits of a number
+
+#include <stdio.h>
+
+int main() {
+    // Write C code her
+    int num,sum=0;
+    printf("enter a number:");
+    scanf("%d",&num);
+    while(num!=0){
+        sum+=num%10;
+        num=num/10;
+    }
+    printf("%d",sum);
+
+    return 0;
+}
+
+\\reverse of a number
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int num,rev;
+    printf("enter a number:");
+    scanf("%d",&num);
+    while(num!=0){
+        rev=num%10;
+        printf("%d",rev);
+        num=num/10;
+        
+    }
+
+    return 0;
+}
+
+\\palindrome
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int num,rev=0,temp,rem;
+    printf("enter a number:");
+    scanf("%d",&num);
+    temp=num;
+    while(num!=0){
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+        
+    }
+    if(rev==temp)
+    printf("the num is palindrome");
+    else
+    printf("the num is not a palindrome");
+
+    return 0;
+}
+
+\\armstrong
+
+n=int(input("enter a num"))
+og=n
+len=len(str(n))
+sum=0
+temp=n
+while temp>0:
+    dig=temp%10
+    sum+=dig**len
+    temp//=10
+
+
+if sum==og:
+    print("amstrong")
+else:
+    print("not amstrong")
+
+\\armstrong in given range
+
+#include <stdio.h>
+#include<math.h>
+int amstrong(int num,int len){
+    int digit,sum=0,og=num;
+    while(num>0){
+        
+        digit=num%10;
+        sum+=pow(digit,len);
+        num/=10;
+    }
+    return sum==og;
+}
+
+int main() {
+    // Write C code here
+   int num,sum,len=0,temp;
+   printf("enter the number");
+   scanf("%d",&num);
+   temp=num;
+   while(temp>0){
+       len++;
+       temp=temp/10;
+  
+   }  
+       
+       if(amstrong(num,len)){
+          printf("amstrong"); 
+       }
+       
+       else
+       {
+       printf("not a  amstrong");
+       }
+
+    return 0;
+}
+
+\\fibonacci upto n num
+
+#include <stdio.h>
+
+int main() {
+    int a=0,b=1,n,i,c;
+    printf("enter a number:");
+    scanf("%d",&n);
+    printf("%d %d",a,b);
+    for(i=2;i<n;i++){
+        c=a+b;
+        printf(" %d",c);
+        a=b;
+        b=c;
+    }
+    return 0;
+}
+
+\\nth term of fibonacci
+
+#include <stdio.h>
+
+int main() {
+    int a=0,b=1,n,i,c;
+    printf("enter a number:");
+    scanf("%d",&n);
+    if(n==1)
+    printf("fibonacci term:%d",a);
+    else if(n==2)
+    printf("fibonacci term:%d",b);
+    else{
+        for(i=3;i<=n;i++){
+            c=a+b;
+            a=b;
+            b=c;
+        }
+        printf("fibonacci term:%d",c);
+    }
+    return 0;
+}
+
+
