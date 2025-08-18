@@ -320,4 +320,386 @@ int main() {
     return 0;
 }
 
+// power of a number
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Write C code here
+   int n,p;
+   printf("enter the base and power");
+   scanf("%d %d",&n,&p);
+   printf("%.2f",pow(n,p));
+
+    return 0;
+}
+
+//factorial of a number
+
+#include <stdio.h>
+#include <math.h>
+int fact(int n){
+    
+    if(n==1||n==0){
+        return 1;
+    }
+    else{
+        return n*fact(n-1);
+}
+}
+int main() {
+    // Write C code here
+    int x;
+    printf("enter a number:");
+    scanf("%d",&x);
+    printf("%d",fact(x));
+return 0;
+   
+}
+
+//finding prime factors
+
+#include <stdio.h>
+#include<stdbool.h>
+int prime(int n){
+    int count=0;
+    for(int i=2;i<n;i++){
+        if(n%i==0)
+        count+=1;
+        break;
+    }
+    if (count==0)
+    return true;
+    else
+    return false;
+}
+
+
+
+
+int main() {
+    // Write C code here
+    int n,i;
+    printf("enter a number:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++){
+        if(n%i==0 && prime(i)){
+            printf("%d ",i);
+        }
+    }
+    return 0;
+}
+
+//factors of a number
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n,i;
+    printf("enter a number:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++){
+        if(n%i==0){
+            printf("%d ",i);
+        }
+    }
+    return 0;
+}
+
+//strong number
+
+#include <stdio.h>
+
+int fact(int n){
+
+
+     int factorial=1;
+     for(int i=1;i<=n;i++){
+         factorial*=i;
+         
+     }return factorial;
+}
+int isStrong(int n){
+    int digit,sum=0,temp=n;
+    while(n!=0){
+    digit=n%10;
+    sum+=fact(digit);
+    n=n/10;
+    }
+    return sum==temp;
+}
+
+int main() {
+    int x,sum=0,len=0;
+    printf("enter a num:");
+    scanf("%d",&x);
+    if (isStrong(x)){
+    printf("it is a strong num");
+    }
+    else{
+        printf("not a strong num");
+    }
+    
+
+    return 0;
+}
+
+//perfect number
+
+#include <stdio.h>
+
+int main(){
+    int x,sum=0;
+    printf("enter a number:");
+    scanf("%d",&x);
+    for(int i=1;i<x;i++){
+    if(x%i==0){
+        sum+=i;
+    }
+    }
+    if(sum==x)
+    printf("perfect num");
+    else
+    printf("not perfect");
+
+
+    return 0;
+}
+
+\\perfect square
+
+#include <stdio.h>
+#include<math.h>
+int main() {
+    // Write C code here
+   int n,sqr;
+   printf("enter a number:");
+   scanf("%d",&n);
+   sqr=sqrt(n);
+   if(sqr*sqr==n){
+      printf("perfect square");
+   }
+   else
+   printf("not a perfect square");
+    return 0;
+}
+
+//automorphic number
+
+#include <stdio.h>
+#include<math.h>
+int main() {
+    // Write C code here
+   int n,sqr,lastnum,lastsqr;
+   printf("enter a number:");
+   scanf("%d",&n);
+   sqr=n*n;
+   lastsqr=sqr%10;
+   lastnum=n%10;
+   if(lastsqr==lastnum){
+     printf("automorphic");
+   }
+   else{
+       printf("not automorphic");
+   }
+   return 0;
+}
+
+//harshad number
+
+#include <stdio.h>
+
+int main() {
+    int n, sum=0, temp,digit;
+    printf("enter a number:");
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0){
+        digit=n%10;
+        sum+=digit;
+        n=n/10;
+    }
+    if(temp%sum==0){
+        printf("harshad number");
+    }
+    else{
+        printf("not a harshad number");
+    }
+
+    return 0;
+}
+
+//abundant number
+
+#include <stdio.h>
+
+int main() {
+    int n, sum=0, temp,digit;
+    printf("enter a number:");
+    scanf("%d",&n);
+    temp=n;
+    for(int i=1;i<n;i++){
+        if(n%i==0){
+            sum+=i;
+        }
+    }    
+    if(sum>temp){
+        printf("abundant number");
+    }
+    else
+    printf("not an abuntant number");
+
+    return 0;
+}
+
+//friendly pair 
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n1,n2,sum1=0,sum2=0,i;
+    printf("enter a num1 and num2:");
+    scanf("%d %d",&n1,&n2);
+    for(i=1;i<n1+1;i++){
+        if(n1%i==0){
+            sum1+=i;
+        }
+    }
+    for(i=1;i<n2+1;i++){
+        if(n2%i==0){
+            sum2+=i;
+        }
+    }
+    if(sum1/n1==sum2/n2){
+        printf("friendly pair");
+    }
+    else
+    printf("not a friendly pair");
+    return 0;
+}
+
+//HCF
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n1,n2,i,small,hcf;
+   printf("enter num1 and num2:");
+   scanf("%d %d",&n1,&n2);
+   if(n1<n2)
+   small=n1;
+   else
+   small=n2;
+   for(i=1;i<small+1;i++){
+       if(n1%i==0 & n2%i==0){
+           hcf=i;
+       }
+   }
+   printf("%d",hcf);
+    return 0;
+}
+
+\\LCM
+
+#include <stdio.h>
+#include<stdbool.h>
+
+int main() {
+    // Write C code here
+   int n1,n2,max,lcm;
+   printf("enter num1 and num2:");
+   scanf("%d %d",&n1,&n2);
+   if (n1>n2)
+   max=n1;
+   else
+   max=n2;
+   while (true){
+       if (max%n1==0 && max%n2==0){
+           lcm=max;
+           break;
+                  }
+    max+=1;
+    
+   }
+   printf("%d",lcm);
+
+    return 0;
+}
+
+//GCD
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n1,n2,large,gcd,i;
+    printf("enter num1 and num2:");
+    scanf("%d %d",&n1,&n2);
+    if(n1>n2)
+    large=n1;
+    else
+    large=n2;
+    for(i=large;i>1;i--){
+        if(n1%i==0 & n2%i==0){
+        gcd=i;
+        break;
+        }
+        }
+    printf("%d",gcd);
+    return 0;
+}
+
+//Octal to decimal 
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int main() {    
+    int i,len,dec=0;
+    char n[5];
+    printf("enter a number:");
+    scanf("%s",&n);
+    len=strlen(n);
+    for(i=0;i<len;i++){
+        dec+=(n[i] - '0')*pow(8,len-i-1);
+    }
+    printf("%d",dec);
+
+    return 0;
+}
+
+//hexa to dec
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int main() {
+    char hex[20];
+    int decimal = 0, i, value, length;
+
+    printf("Enter a hexadecimal number: ");
+    scanf("%s", hex);
+
+    length = strlen(hex);
+
+    for (i = 0; i < length; i++) {
+        if (hex[i] >= '0' && hex[i] <= '9') {
+            value = hex[i] - '0';
+        } else if (hex[i] >= 'A' && hex[i] <= 'F') {
+            value = hex[i] - 'A' + 10;
+        } else if (hex[i] >= 'a' && hex[i] <= 'f') {
+            value = hex[i] - 'a' + 10;
+        }
+        decimal += value * pow(16, length - i - 1);
+    }
+
+    printf("Decimal equivalent: %d\n", decimal);
+    return 0;
+}
 
