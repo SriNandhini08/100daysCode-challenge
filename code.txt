@@ -703,3 +703,47 @@ int main() {
     return 0;
 }
 
+\\decimal to binary
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+   int n,bin[32],i=0,j;
+   printf("Enter a number:");
+   scanf("%d",&n);
+   while(n>0){
+       bin[i]=n%2;
+       n=n/2;
+       i++;
+   }
+   for(j=i-1;j>=0;j--){
+       printf("%d",bin[j]);
+   }
+
+    return 0;
+}
+
+//decimal to Octal
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int num,i=0,j,oct[10],rem;
+    printf("enter a number :");
+    scanf("%d",&num);
+    while(num>0){
+        rem=num%8;
+        oct[i]=rem;
+        num=num/8;
+        i++;
+    }
+    for(j=i-1;j>=0;j--){
+        printf("%d",oct[j]);
+    }
+
+    return 0;
+}
+
+
