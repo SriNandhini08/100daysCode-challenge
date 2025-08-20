@@ -746,4 +746,30 @@ int main() {
     return 0;
 }
 
+//dec to hexadecimal
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int dec,remain;
+    char hexa[20];
+    int i=0;
+    printf("enter a number:");
+    scanf("%d",&dec);
+    while(dec>0){
+        remain=dec%16;
+        if(remain<10){
+        hexa[i]=48+remain;}
+        else{
+        hexa[i]=55+remain;}
+        i++;
+        dec=dec/16;
+        
+    }
+    for(int j=i-1;j>=0;j--){
+        printf("%c",hexa[j]);
+    }
+    return 0;
+}
 
