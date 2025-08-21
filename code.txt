@@ -773,3 +773,36 @@ int main() {
     return 0;
 }
 
+//binary to Octal
+
+#include <stdio.h>
+#include<string.h>
+#include<math.h>
+
+
+int main() {
+    // Write C code here
+  int dec=0,len,power=0,rem,base=1,oct=0;
+  char bin[32];
+  printf("enter a number:");
+  scanf("%s",&bin);
+  len=strlen(bin);
+  for(int i =len-1;i>=0;i--){
+      if(bin[i]=='1'){
+          dec+=pow(2,power);
+          }
+          power++;
+  }
+  while(dec>0){
+      rem=dec%8;
+      oct+=rem*base;
+      dec=dec/8;
+      base*=10;
+      
+  }
+  printf("%d",oct);
+
+    return 0;
+}
+
+
