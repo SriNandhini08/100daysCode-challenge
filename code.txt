@@ -862,3 +862,27 @@ int main() {
     return 0;
 }
 
+//permutation of people and rows
+
+#include <stdio.h>
+int fact(int n){
+    int factorial;
+    if(n==1 || n==0)
+    return 1;
+    else{
+        factorial=n*fact(n-1);
+    }
+    
+    
+}
+int main() {
+    // Write C code here
+    int r,p,permutation;
+    printf("enter the no of people and no of rows:");
+    scanf("%d %d",&p,&r);
+    permutation=fact(p)/fact(p-r);
+    printf("%d number of people can occupy in %d no of rows",p,permutation);
+    return 0;
+}
+
+
