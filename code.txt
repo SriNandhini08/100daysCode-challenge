@@ -885,4 +885,42 @@ int main() {
     return 0;
 }
 
+\\maximum handshakes
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n,max;
+    printf("enter the number of people:");
+    scanf("%d",&n);
+    max=(n*(n-1))/2;
+    printf("the maximum number of handshake %d",max);
+
+    return 0;
+}
+
+\\adding two denominators
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n1,n2,d1,d2,c,numer,deno;
+    printf("enter the numerator and demonitor of num1:");
+    scanf("%d %d",&n1,&d1);
+    printf("enter the numerator and demonitor of num2:");
+    scanf("%d %d",&n2,&d2);
+    numer=((n1*d2)+(n2*d1));
+    deno=(d1*d2);
+    for(int g=1;g<=numer && g<=deno;++g){
+        if(numer%g==0 && deno%g==0)
+        c=g;
+    }
+    
+    printf("%d / %d + %d / %d = %d / %d",n1,d1,n2,d2,numer/c,deno/c);
+    
+    return 0;
+}
+
 
