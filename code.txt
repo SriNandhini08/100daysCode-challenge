@@ -923,4 +923,55 @@ int main() {
     return 0;
 }
 
+\\replacing 0 with 1
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    long long num,digit,place=1,result=0;
+    printf("enter a number:");
+    scanf("%lld",&num);
+    int temp;
+    temp=num;
+    while(temp>0){
+        digit=temp%10;
+        if(digit==0){
+            digit=1;
+        }
+        result=result+digit*place;
+        place*=10;
+        temp/=10;
+        }
+    printf("%lld",result);
+    
+
+    return 0;
+}
+
+\\area of circle
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    long long num,digit,place=1,result=0;
+    printf("enter a number:");
+    scanf("%lld",&num);
+    int temp;
+    temp=num;
+    while(temp>0){
+        digit=temp%10;
+        if(digit==0){
+            digit=1;
+        }
+        result=result+digit*place;
+        place*=10;
+        temp/=10;
+        }
+    printf("%lld",result);
+    
+
+    return 0;
+}
 
