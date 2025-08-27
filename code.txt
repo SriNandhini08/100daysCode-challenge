@@ -975,3 +975,31 @@ int main() {
     return 0;
 }
 
+\\prime between 1 to 100
+
+#include <stdio.h>
+#include <stdbool.h>
+int isPrime(int num){
+    int flag=0;
+    for(int i=2;i<num;i++){
+        if(num%i==0)
+        flag+=1;
+    }
+    if(flag==0)
+    return true;
+    else
+    return false;
+}
+int main() {
+    printf("Prime numbers between 1 to 100\n");
+    for(int i=2;i<=100;i++){
+        if(isPrime(i)){
+            printf("%d ",i);
+        }
+    }
+    
+
+    return 0;
+}
+
+
