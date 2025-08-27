@@ -1002,4 +1002,26 @@ int main() {
     return 0;
 }
 
+\\number of digits in a number
+
+#include <stdio.h>
+#include <stdbool.h>
+int num(int n){
+    int count=0,rem;
+    while(n>0){
+         n/=10;
+        count++;
+    }
+     return count;
+}
+    
+int main()
+{
+    int integer;
+    printf("enter the number:");
+    scanf("%d",&integer);
+    printf("%d",num(integer));
+    return 0;
+    
+    }
 
