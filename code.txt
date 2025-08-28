@@ -1025,3 +1025,48 @@ int main()
     
     }
 
+\\number to words
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+
+    // Write C code here
+   char *ones[]={" ","one","two","three","four","five","six","seven","eight","nine"   };
+   char *tens[]={" "," ","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"};
+   char *teens[]={"ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"};
+   void convert(int n){
+       if (n==0){
+        printf("Zero");
+        return;
+       }
+       if(n/1000>0){
+           printf("%s thousand ",ones[n/1000]);
+           n%=1000;
+       }
+       if(n/100>0){
+           printf("%s hundred ",ones[n/100]);
+           n%=100;
+       }
+       if(n>=10 && n<=19){
+           printf("%s ",teens[n-10]);
+       }
+       else{
+           if(n/10>0){
+               printf("%s ",tens[n/10]);
+           }
+           if(n%10>0){ 
+               printf("%s ",ones[n%10]);
+           }
+       }
+   }
+   int main() {
+   int num;
+   printf("enter a number:");
+   scanf("%d",&num);
+   convert(num);
+
+    return 0;
+}
+
+
