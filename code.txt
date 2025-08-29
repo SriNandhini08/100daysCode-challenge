@@ -1069,4 +1069,51 @@ int main()
     return 0;
 }
 
+//number of days in a month
+
+#include <stdio.h>
+
+void MonthDays(int n){
+    if(n==1 || n==3 || n==5 || n==7 || n==8|| n==10 || n==12)
+    printf("The number of days is 31");
+    else if(n==2)
+    printf("The number of days is 28 or 29");
+    else if(n==4 || n==6|| n==9 || n==11)
+    printf("The number of days is 30");
+    else
+    printf("invalid month");
+}
+
+int main() {
+    int month;
+    printf("Enter the month number:");
+    scanf("%d",&month);
+    MonthDays(month);
+   
+
+    return 0;
+}
+
+//counting the digits
+
+#include <stdio.h>
+
+int main(){
+    int num,rem,digit,count=0;
+    printf("Enter a  number:");
+    scanf("%d",&num);
+    printf("Enter the digit to count:");
+    scanf("%d",&digit);
+    int temp;
+    temp=num;
+    while(temp>0){
+        rem=temp%10;
+        if(rem==digit){
+            count++;
+        }
+        temp/=10;
+    }
+    printf("%d has occured %d times",digit,count);
+    return 0;
+}
 
