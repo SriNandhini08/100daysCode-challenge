@@ -1138,4 +1138,32 @@ int main() {
     return 0;
 }
 
+//prime using recursion
+
+
+#include <stdio.h>
+
+int Prime(int i,int n){
+    if(n==i)
+    return 0;
+    else if(n%i==0)
+    return 1;
+    else{
+        return Prime(i+1,n);
+    }
+}
+
+int main() {
+    int num,divi;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    divi=2;
+    if(Prime(divi,num)==0)
+    printf("Prime");
+    else
+    printf("not prime");
+    
+
+    return 0;
+}
 
