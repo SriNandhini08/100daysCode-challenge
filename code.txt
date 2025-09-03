@@ -1198,3 +1198,38 @@ int main() {
 
     return 0;
 }
+
+//Minimum value in an array 
+
+#include <stdio.h>
+
+// Recursive function to find minimum in array
+int findMin(int arr[], int n) {
+    // Base case: only one element
+    if (n == 1)
+        return arr[0];
+
+    // Find minimum in remaining array
+    int minRest = findMin(arr, n - 1);
+
+    // Return minimum between last element and minRest
+    return (arr[n - 1] < minRest) ? arr[n - 1] : minRest;
+}
+
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int minValue = findMin(arr, n);
+    printf("Minimum value = %d\n", minValue);
+
+    return 0;
+}
+
