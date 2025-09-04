@@ -1233,3 +1233,23 @@ int main() {
     return 0;
 }
 
+//reverse of a number using recursion
+
+#include <stdio.h>
+int Reverse(int num,int rev){
+    if (num==0)
+    return rev;
+    int rem;
+        rem=num%10;
+        rev=(rev*10)+rem;
+        return Reverse(num/10,rev);     
+        
+        
+    
+}
+
+int main() {
+   printf("%d",Reverse(123,0));
+
+    return 0;
+}
